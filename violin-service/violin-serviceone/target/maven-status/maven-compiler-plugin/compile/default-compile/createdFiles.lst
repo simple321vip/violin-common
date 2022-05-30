@@ -1,0 +1,3 @@
+com\violin\service\one\controller\ServiceOneController.class
+com\violin\service\one\client\ServiceClient.class
+com\violin\service\one\ServiceOneApplication.class
