@@ -1,8 +1,8 @@
 server:
-  port: 9098
+  port: 8080
 spring:
   application:
-    name: serviceone
+    name: oauth
   cloud:
     nacos:
       discovery:
