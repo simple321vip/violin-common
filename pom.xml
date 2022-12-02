@@ -24,9 +24,11 @@
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 	</properties>
 	<dependencies>
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -34,19 +36,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-logging</artifactId>
-		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-redis</artifactId>-->
-<!--		</dependency>-->
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -58,28 +52,30 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.2.0</version>
-		</dependency>
 
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-			<version>8.0.25</version>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.20</version>
 			<optional>true</optional>
+		</dependency>
+		<!--QueryDSL支持-->
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-apt</artifactId>
+			<version>4.4.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!--QueryDSL支持-->
+		<dependency>
+			<groupId>com.querydsl</groupId>
+			<artifactId>querydsl-jpa</artifactId>
+			<version>4.4.0</version>
 		</dependency>
 
 		<!--	for jdk 9 and higher, jdk remove javaee api, so we need to add dependency	-->
@@ -99,32 +95,7 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.80</version>
 		</dependency>
-		<!--QueryDSL支持-->
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-apt</artifactId>
-			<version>4.4.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<!--QueryDSL支持-->
-		<dependency>
-			<groupId>com.querydsl</groupId>
-			<artifactId>querydsl-jpa</artifactId>
-			<version>4.4.0</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.openjdk.jol</groupId>
-			<artifactId>jol-core</artifactId>
-			<version>0.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.200</version>
-			<scope>runtime</scope>
-		</dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -137,16 +108,10 @@
             <version>2.0.2</version>
             <scope>compile</scope>
         </dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.5.13</version>
-		</dependency>
 
     </dependencies>
 
 	<build>
-		<finalName>violin-book</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -165,7 +130,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>none</mainClass>
-					<classifier>execute</classifier>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
@@ -178,22 +142,6 @@
 						<goals>
 							<goal>repackage</goal>
 						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>com.mysema.maven</groupId>
-				<artifactId>apt-maven-plugin</artifactId>
-				<version>1.1.3</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>process</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>target/generated-sources/java</outputDirectory>
-							<processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
