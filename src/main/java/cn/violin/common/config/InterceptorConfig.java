@@ -1,6 +1,6 @@
-package cn.violin.home.common.config;
+package cn.violin.common.config;
 
-import cn.violin.home.common.Interceptor.AuthenticationInterceptor;
+import cn.violin.common.Interceptor.AuthenticationInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

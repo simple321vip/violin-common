@@ -1,6 +1,6 @@
-package cn.violin.home.common.config;
+package cn.violin.common.config;
 
-import cn.violin.home.common.resolver.TenantHandlerMethodArgumentResolver;
+import cn.violin.common.resolver.TenantHandlerMethodArgumentResolver;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

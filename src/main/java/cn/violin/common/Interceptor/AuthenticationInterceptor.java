@@ -1,8 +1,8 @@
-package cn.violin.home.common.Interceptor;
+package cn.violin.common.Interceptor;
 
-import cn.violin.home.common.annotation.PassToken;
+import cn.violin.common.annotation.PassToken;
 
-import cn.violin.home.common.utils.JedisUtils;
+import cn.violin.common.utils.JedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Optional;
 
-import static cn.violin.home.common.utils.CommonConstant.*;
+import static cn.violin.common.utils.CommonConstant.*;
 
 /**
  * Interceptor トーケンの検証

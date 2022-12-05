@@ -1,4 +1,4 @@
-package cn.violin.home.common.config;
+package cn.violin.common.config;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
-package cn.violin.home.common.resolver;
+package cn.violin.common.resolver;
 
-import cn.violin.home.common.annotation.CurrentUser;
-import cn.violin.home.common.entity.Tenant;
+import cn.violin.common.annotation.CurrentUser;
+import cn.violin.common.entity.Tenant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;

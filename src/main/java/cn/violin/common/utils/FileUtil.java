@@ -1,4 +1,4 @@
-package cn.violin.home.common.utils;
+package cn.violin.common.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

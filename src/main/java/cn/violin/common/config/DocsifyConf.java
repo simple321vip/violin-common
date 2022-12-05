@@ -1,4 +1,4 @@
-package cn.violin.home.common.config;
+package cn.violin.common.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

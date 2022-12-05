@@ -1,4 +1,4 @@
-package cn.violin.home.common.config;
+package cn.violin.common.config;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

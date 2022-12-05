@@ -1,4 +1,4 @@
-package cn.violin.home.common.utils;
+package cn.violin.common.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

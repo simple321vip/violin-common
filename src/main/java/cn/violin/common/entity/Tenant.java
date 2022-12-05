@@ -1,4 +1,4 @@
-package cn.violin.home.common.entity;
+package cn.violin.common.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
