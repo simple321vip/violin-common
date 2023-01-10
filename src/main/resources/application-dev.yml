@@ -5,9 +5,9 @@ server:
     service: localhost
 spring:
   datasource:
-    url: jdbc:h2:~/db;MODE=MYSQL
-    driver-class-name: org.h2.Driver
-    username: guan
+    url: jdbc:mysql://localhost:3306/violin?allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
     password: 123456
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql
