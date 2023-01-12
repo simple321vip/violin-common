@@ -5,7 +5,7 @@ server:
     service: 127.0.0.1
 spring:
   datasource:
-    url: jdbc:mysql://violin-mysql:3306/violin?allowPublicKeyRetrieval=true
+    url: jdbc:mysql://violin-mysql:3306/violin?allowPublicKeyRetrieval=true&useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
