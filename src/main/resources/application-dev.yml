@@ -3,6 +3,7 @@ server:
     redirect-ip: http://localhost:3000/
   mongo:
     service: localhost
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/violin?allowPublicKeyRetrieval=true&useSSL=false
@@ -11,11 +12,14 @@ spring:
     password: 123456
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql
-    initialization-mode: always
+    initialization-mode: never # never, embedded, always -> the first run use always, after that use never.
   data:
     mongodb:
       uri: mongodb://localhost:27017/violin
       transactionEnabled: true
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true # 打印执行的SQL
 
 constant:
   docsify-workspace: E:\\
