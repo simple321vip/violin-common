@@ -11,7 +11,12 @@ spring:
     password: 123456
     schema: classpath:db/schema.sql
     data: classpath:db/data.sql
-    initialization-mode: always
+    initialization-mode: never
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: validate # test env
+    show-sql: true # 打印执行的SQL
   data:
     mongodb:
       uri: mongodb://mongo:27017/violin
