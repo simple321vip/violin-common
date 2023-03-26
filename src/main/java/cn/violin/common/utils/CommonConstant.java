@@ -24,6 +24,9 @@ public class CommonConstant {
 
     // common column views
     public final static String COLUMN_ORDER = "order";
+    public final static String COLUMN_TENANT_ID = "owner";
+    public final static String COLUMN_WIKI_ID = "bid";
+    public final static String COLUMN_WIKI_TYPE_ID = "btId";
 
     // error message
     public final static String ERROR_INFO_1 = "token is wrong";
