@@ -28,6 +28,4 @@ public class Tenant {
     private int pageNo;
 
     private int pageSize;
-
-    private String wikiName;
 }
