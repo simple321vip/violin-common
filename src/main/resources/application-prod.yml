@@ -45,5 +45,5 @@ violin:
       max-wait: -1
 
 logging:
-  config: classpath:logback-spring.xml
+  config: classpath:log4j2-spring-prod.xml
   path: /log

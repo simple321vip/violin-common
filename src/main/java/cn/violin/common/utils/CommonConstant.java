@@ -19,14 +19,8 @@ public class CommonConstant {
     public final static DateTimeFormatter FORMATTER_DATETIME = DateTimeFormatter.ofPattern("yyyyMMddHHmmSS");
     public final static DateTimeFormatter UPDATE_DATETIME = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:SS");
 
-    public final static String WORD_1 = "你的世界";
-    public final static String WORD_2 = "从这里开始";
-
-    // common column views
-    public final static String COLUMN_ORDER = "order";
-    public final static String COLUMN_TENANT_ID = "owner";
-    public final static String COLUMN_WIKI_ID = "bid";
-    public final static String COLUMN_WIKI_TYPE_ID = "btId";
+    // COMMON COLUMN
+    public final static String LAST_UPDATE_DATETIME = "updateDateTime";
 
     // error message
     public final static String ERROR_INFO_1 = "token is wrong";
