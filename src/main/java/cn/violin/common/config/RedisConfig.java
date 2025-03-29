@@ -50,7 +50,7 @@ public class RedisConfig {
 
         Jedis jedis = jedisPool.getResource();
         log.info(jedis.ping());
-        log.info("JedisPool连接成功:" + host + "\t" + port);
+        log.info("JedisPool连接成功:{}\t{}", host, port);
         jedis.close();
         return jedisPool;
     }

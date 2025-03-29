@@ -7,7 +7,11 @@
 
 **1. mysql**
 
-  略
+  prod 环境：
+  
+    kubectl exec -it podName -n {namespace} -- /bin/sh
+    mysql -u root -p violin
+    > show databases;
 
 **2. mongodb**
 
@@ -17,11 +21,13 @@
     .\mongod --dbpath "E:\Program Files\mongodb\data\db"
     
   prod 环境：
+  
     docker exec -it containerid /bin/sh
     mongo
-    db.collection.find().pretty()
-    db.collection.find({key1:value1})
-    db.collection.update( { "account" : "simple321vip" } , { $set : { "wikiName" : "guan"} } );
+    use violin
+    db.{collection}.find().pretty()
+    db.{collection}.find({key1:value1})
+    db.{collection}.update( { "account" : "simple321vip" } , { $set : { "wikiName" : "guan"} } );
     
 **3. redis**
 
@@ -33,6 +39,7 @@
     redis-cli
 
     // set auth password
+    // redis 重启启动后，默认没有requirepass，所以需要设置
     config get requirepass
     config set requirepass 123456
     
